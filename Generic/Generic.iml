@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -34,7 +33,6 @@
     <orderEntry type="library" name="Maven: xalan:serializer:2.7.2" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.4.1" level="project" />
     <orderEntry type="library" name="Maven: net.sourceforge.htmlunit:htmlunit-core-js:2.17" level="project" />
     <orderEntry type="library" name="Maven: xerces:xercesImpl:2.11.0" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
@@ -65,8 +63,14 @@
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:4.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi:3.13-beta1" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
+    <orderEntry type="library" name="Maven: com.aventstack:extentreports:3.0.7" level="project" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver:3.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:bson:3.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:3.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.2" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.9.2" level="project" />
+    <orderEntry type="library" name="Maven: com.relevantcodes:extentreports:2.41.1" level="project" />
+    <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.8.11.1" level="project" />
   </component>
 </module>
-=======
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" version="4" />
->>>>>>> 37914d21217e39569804230ee56224fcc9aa71d4

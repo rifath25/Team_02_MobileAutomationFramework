@@ -30,16 +30,19 @@ public class MobileAPI {
     public String OS = null;
     public String deviceName = null;
     public String deviceType = null;
+    public String udId=null;
     public String appType = null;
     public String version = null;
+    public String appPackage= null;
+    public String appActivity=null;
     public File appDirectory = null;
     public File findApp = null;
     public DesiredCapabilities cap = null;
 
-    @Parameters({"OS","appType","deviceType", "deviceName","version"})
+    @Parameters({"OS","appType","deviceType","udId", "deviceName","version","appPackage","appActivity"})
     @BeforeMethod
-    public void setUp(String OS,String appType,String deviceType,String deviceName,
-                      String version)throws IOException,InterruptedException{
+    public void setUp(String OS,String appType,String deviceType,String udId,String deviceName,
+                      String version,String appPackage,String appActivity)throws IOException,InterruptedException{
 
         if(OS.equalsIgnoreCase("ios")){
             if(appType.contains("iPhone")){
@@ -95,14 +98,14 @@ public class MobileAPI {
 
         }else if(OS.contains("Android")){
             if(appType.contains("Phone")){
-                appDirectory = new File("NYP/src/app");
-                findApp = new File("/Users/mrahman/develop/pnt/MobileAutomationJuly2019/NYP/src/app/nyp.apk");
                 if(deviceType.equalsIgnoreCase("RealDevice")){
                     cap = new DesiredCapabilities();
                     cap.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
+                    cap.setCapability(MobileCapabilityType.UDID,udId);
                     cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
                     cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-                    cap.setCapability(MobileCapabilityType.APP, findApp.getAbsolutePath());
+                    cap.setCapability(MobileCapabilityType.APP_PACKAGE, appPackage);
+                    cap.setCapability(MobileCapabilityType.APP_ACTIVITY, appActivity);
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -110,9 +113,11 @@ public class MobileAPI {
 
                     cap = new DesiredCapabilities();
                     cap.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
+                    cap.setCapability(MobileCapabilityType.UDID,udId);
                     cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
                     cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-                    cap.setCapability(MobileCapabilityType.APP, findApp.getAbsolutePath());
+                    cap.setCapability(MobileCapabilityType.APP_PACKAGE, appPackage);
+                    cap.setCapability(MobileCapabilityType.APP_ACTIVITY, appActivity);
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 }
@@ -121,9 +126,11 @@ public class MobileAPI {
                 if(deviceType.equalsIgnoreCase("RealDevice")){
                     cap = new DesiredCapabilities();
                     cap.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
+                    cap.setCapability(MobileCapabilityType.UDID,udId);
                     cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
                     cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-                    cap.setCapability(MobileCapabilityType.APP, findApp.getAbsolutePath());
+                    cap.setCapability(MobileCapabilityType.APP_PACKAGE, appPackage);
+                    cap.setCapability(MobileCapabilityType.APP_ACTIVITY, appActivity);
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -131,9 +138,11 @@ public class MobileAPI {
 
                     cap = new DesiredCapabilities();
                     cap.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
+                    cap.setCapability(MobileCapabilityType.UDID,udId);
                     cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
                     cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-                    cap.setCapability(MobileCapabilityType.APP, findApp.getAbsolutePath());
+                    cap.setCapability(MobileCapabilityType.APP_PACKAGE, appPackage);
+                    cap.setCapability(MobileCapabilityType.APP_ACTIVITY, appActivity);
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 }

@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>Twitter</module>
         <module>FoxNews</module>
+        <module>Instagram</module>
     </modules>
     <dependencyManagement>
         <dependencies>

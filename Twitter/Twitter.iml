@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -70,3 +71,6 @@
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
   </component>
 </module>
+=======
+<module type="JAVA_MODULE" version="4" />
+>>>>>>> 94762709a6c80cd6b4c7f0ded290c25d501f7faa

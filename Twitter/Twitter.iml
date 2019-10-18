@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+=======
+<<<<<<< HEAD
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" version="4">
+>>>>>>> 37914d21217e39569804230ee56224fcc9aa71d4
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
+=======
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+>>>>>>> 37914d21217e39569804230ee56224fcc9aa71d4
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -65,4 +77,11 @@
     <orderEntry type="library" name="Maven: org.apache.poi:poi:3.13-beta1" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
   </component>
+<<<<<<< HEAD
 </module>
+=======
+</module>
+=======
+<module type="JAVA_MODULE" version="4" />
+>>>>>>> 94762709a6c80cd6b4c7f0ded290c25d501f7faa
+>>>>>>> 37914d21217e39569804230ee56224fcc9aa71d4

@@ -4,15 +4,17 @@
 
     <parameter name="OS" value="Android"/>
     <parameter name="appType" value="Phone"/>
-    <parameter name="deviceType" value="RealDevice"/>
-    <parameter name="deviceName" value="5T"/>
-    <parameter name="version" value="9"/>
-    <parameter name="moduleName" value="NYP"/>
-    <parameter name="appName" value="nyp.apk"/>
+    <parameter name="deviceType" value="Emulator"/>
+    <parameter name="deviceName" value="Pixel_3a_API_27"/>
+    <parameter name="udId" value="emulator-5554"/>
+    <parameter name="version" value="8.1.0"/>
+    <parameter name="moduleName" value="Twitter"/>
+    <parameter name="appPackage" value="com.twitter.android"/>
+    <parameter name="appActivity" value="com.twitter.android.search.SearchActivity"/>
 
     <test name="Go to Home page" preserve-order="true">
         <classes>
-            <class name="articles.ArticleTest"/>
+            <class name="testLayer.TestSearchPage"/>
         </classes>
     </test>
 </suite>

@@ -14,7 +14,7 @@
 
     <test name="Go to Home page" preserve-order="true">
         <classes>
-          <class name=""/>
+          <class name="testLayer.TestHomePage"/>
         </classes>
     </test>
 </suite>

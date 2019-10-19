@@ -48,6 +48,8 @@ public class MobileAPI {
     public File findApp = null;
     public DesiredCapabilities cap = null;
 
+    //ExtentReport
+
     public static ExtentReports extent;
     @BeforeSuite
     public void extentSetup(ITestContext context) {
@@ -86,6 +88,7 @@ public class MobileAPI {
         ExtentTestManager.endTest();
         extent.flush();
 
+
     }
 
     @AfterSuite
@@ -97,8 +100,6 @@ public class MobileAPI {
         calendar.setTimeInMillis(millis);
         return calendar.getTime();
     }
-
-
     @Parameters({"OS","appType","deviceType","udId", "deviceName","version","appPackage","appActivity"})
     @BeforeMethod
     public void setUp(String OS,String appType,String deviceType,String udId,String deviceName,

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android test suite on Android Phone">
+
+    <parameter name="OS" value="Android"/>
+    <parameter name="appType" value="Phone"/>
+    <parameter name="deviceType" value="Emulator"/>
+    <parameter name="deviceName" value="Pixel_3a_API_27"/>
+    <parameter name="udId" value="emulator-5554"/>
+    <parameter name="version" value="8.1.0"/>
+    <parameter name="moduleName" value="Instagram"/>
+    <parameter name="appPackage" value="com.instagram.android"/>
+    <parameter name="appActivity" value="com.instagram.android.activity.MainTabActivity"/>
+
+    <test name="Go to Home page" preserve-order="true">
+        <classes>
+          <class name="testLayer.TestHomePage"/>
+        </classes>
+    </test>
+</suite>

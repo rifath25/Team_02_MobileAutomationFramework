@@ -47,6 +47,55 @@ public class MobileAPI {
     public File appDirectory = null;
     public File findApp = null;
     public DesiredCapabilities cap = null;
+    public static ExtentReports extent;
+    @BeforeSuite
+    public void extentSetup(ITestContext context) {
+        ExtentManager.setOutputDirectory(context);
+        extent = ExtentManager.getInstance();
+    }
+    @BeforeMethod
+    public void startExtent(Method method) {
+        String className = method.getDeclaringClass().getSimpleName();
+        String methodName = method.getName().toLowerCase();
+        ExtentTestManager.startTest(method.getName());
+        ExtentTestManager.getTest().assignCategory(className);
+    }
+    protected String getStackTrace(Throwable t) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        t.printStackTrace(pw);
+        return sw.toString();
+    }
+    @AfterMethod
+    public void afterEachTestMethod(ITestResult result) {
+        ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));
+        ExtentTestManager.getTest().getTest().setEndedTime(getTime(result.getEndMillis()));
+
+        for (String group : result.getMethod().getGroups()) {
+            ExtentTestManager.getTest().assignCategory(group);
+        }
+
+        if (result.getStatus() == 1) {
+            ExtentTestManager.getTest().log(LogStatus.PASS, "Test Passed");
+        } else if (result.getStatus() == 2) {
+            ExtentTestManager.getTest().log(LogStatus.FAIL, getStackTrace(result.getThrowable()));
+        } else if (result.getStatus() == 3) {
+            ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Skipped");
+        }
+        ExtentTestManager.endTest();
+        extent.flush();
+
+    }
+    @AfterSuite
+    public void generateReport() {
+        extent.close();
+    }
+    private Date getTime(long millis) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(millis);
+        return calendar.getTime();
+    }
+
 
     //ExtentReport
 
@@ -206,11 +255,14 @@ public class MobileAPI {
                     cap.setCapability(MobileCapabilityType.APP_ACTIVITY, appActivity);
                     ad = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                     ad.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
                 }
-
             }
-
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> tamanna
     }
 
     @AfterMethod
@@ -272,5 +324,11 @@ public class MobileAPI {
     public void scrollAndClickByName(String locator){
         ad.scrollTo(locator).click();
     }
+    public static String convertToString(String st) {
+        String splitString = "";
+        //splitString = StringUtils.join(StringUtils.splitByCharacterTypeCamelCase(st), ' ');
+        return splitString;
+    }
+
 }
 

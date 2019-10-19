@@ -9,6 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.4.1" level="project" />
     <orderEntry type="module" module-name="Generic" />
     <orderEntry type="library" name="Maven: org.testng:testng:6.9.6" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject:guice:no_aop:4.0" level="project" />

@@ -14,7 +14,7 @@ public class TestHomePage extends MobileAPI {
     }
     @Test
     public void testClickOnLoginButton(){
-            homePage.clickOnLoginButton();
+        homePage.clickOnLoginButton();
     }
     @Test
     public void testClickOnCreateNewAccount(){
@@ -41,3 +41,6 @@ public class TestHomePage extends MobileAPI {
         homePage.clickOnNextButton();
     }
 }
+
+
+

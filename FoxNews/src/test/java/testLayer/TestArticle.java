@@ -18,27 +18,51 @@ public class TestArticle extends MobileAPI {
     }
 
     @Test
-
-    public void test1 (){
+    public void articleRead (){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
+        article.checkArticle();
+    }
+    @Test
+    public void checkImgDisplay(){
+
+        article.imgDisplay();
+    }
+    @Test
+    public void testGetText(){
+
+        article.scrollAndGetText();
+    }
+    @Test
+    public void testCheckTopNews (){
+        article.checkTopNews();
+    }
+    @Test
+    public void testLogoDisplay(){
+        article.logoDisplay();
+
+    }
+    @Test
+    public void testImgText (){
+        article.imgText();
+    }
+    @Test
+    public void checkBtn (){
+        article.clickBtn();
+    }
+    @Test
+    public void testCheckText (){
+        article.checkText();
+    }
+    @Test
+    public void testAgree(){
         article.clickAgree();
-        article.click();
+
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Test
+    public void clickBtn() {
+        article.clickBtn();
+    }
 
 }
